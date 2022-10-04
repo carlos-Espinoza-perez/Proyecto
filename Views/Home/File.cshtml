@@ -1,0 +1,33 @@
+@model string
+
+@{
+    Layout = "_Layout";
+}
+
+@section CSS {
+<link rel="stylesheet" href="~/css/views/file.css">
+}
+
+<script>
+    const __objectId__ = "@Model";
+</script>
+
+@section JS {
+<script src="~/js/views/file.js"></script>
+}
+
+
+<main class="list-object">
+    <h4>Información general</h4>
+
+    <ul class="mdc-list"></ul>
+
+
+    <button class="mdc-fab mdc-fab--extended mdc-button--unelevated">
+        <div class="mdc-fab__ripple"></div>
+        <span class="material-icons mdc-fab__icon">add</span>
+        <span class="mdc-fab__label">Nuevo folder</span>
+    </button>
+</main>
+
+<main class="viewer"></main>

@@ -1,0 +1,55 @@
+body {
+  height: 100vh;
+  background-color: #fafafa; }
+
+.mdc-top-app-bar--fixed-adjust {
+  height: calc(100% - 64px); }
+
+.wrapper {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 450px 1fr; }
+  .wrapper .list-object {
+    width: 100%;
+    border: 1px solid #a3a3a34f;
+    background-color: #fff; }
+  .wrapper .viewer {
+    width: calc(100% - 30px);
+    margin: 15px;
+    border: 1px solid #a3a3a34f;
+    border-radius: 10px;
+    background-color: white; }
+    .wrapper .viewer .adsk-viewing-viewer {
+      height: calc(100vh - 64px - 32px) !important;
+      width: 1440px !important;
+      border-radius: 9px; }
+      .wrapper .viewer .adsk-viewing-viewer .canvas-wrap {
+        height: inherit !important;
+        width: inherit !important; }
+        .wrapper .viewer .adsk-viewing-viewer .canvas-wrap canvas {
+          height: inherit !important;
+          width: inherit !important; }
+
+.list-object h4 {
+  font-size: 17px;
+  margin: 18px;
+  text-align: center;
+  font-weight: 500; }
+
+.mdc-list-item {
+  align-items: center;
+  justify-content: space-between; }
+  .mdc-list-item__text {
+    text-transform: capitalize; }
+
+.mdc-fab {
+  left: 146.5px;
+  bottom: 15px;
+  position: absolute; }
+  .mdc-fab__icon {
+    font-size: 20px;
+    margin-right: 5px; }
+  .mdc-fab__label {
+    text-transform: initial; }

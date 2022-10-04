@@ -1,0 +1,43 @@
+﻿@{
+	Layout = "_Layout";
+}
+
+@section CSS {
+<link rel="stylesheet" href="~/css/views/index.css">
+}
+
+@section JS {
+	<script src="~/js/views/index.js"></script>
+}
+
+
+<h3 class="view-title">Lista de objetos</h3>
+
+<div class="list-card"></div>
+
+<div class="mdc-touch-target-wrapper">
+	<button class="mdc-fab mdc-fab--extended mdc-button--raised">
+		<div class="mdc-fab__ripple"></div>
+		<span class="material-icons mdc-fab__icon">add</span>
+		<span class="mdc-fab__label">Crear nuevo proyecto</span>
+	</button>
+
+</div>
+
+<input id="File" name="File" type="file" hidden class="input-file-upload" />
+
+
+
+<aside class="mdc-snackbar mdc-snackbar--stacked">
+  <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+    <div class="mdc-snackbar__label" aria-atomic="false">
+      Can't send photo. Retry in 5 seconds.
+    </div>
+    <div class="mdc-snackbar__actions" aria-atomic="true">
+      <button type="button" class="mdc-button mdc-snackbar__action">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">Retry</span>
+      </button>
+    </div>
+  </div>
+</aside>
