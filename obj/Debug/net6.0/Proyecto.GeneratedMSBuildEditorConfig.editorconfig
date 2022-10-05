@@ -8,21 +8,21 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Proyecto
 build_property.RootNamespace = Proyecto
-build_property.ProjectDir = a:\2. Cursos\1. Curso de AutoDesk Forge BIM\2. Codigo\2. Proyecto final\Proyecto\
+build_property.ProjectDir = C:\Users\Carlos Espinoza\Documents\Proyecto\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = a:\2. Cursos\1. Curso de AutoDesk Forge BIM\2. Codigo\2. Proyecto final\Proyecto
+build_property.MSBuildProjectDirectory = C:\Users\Carlos Espinoza\Documents\Proyecto
 build_property._RazorSourceGeneratorDebug = 
 
-[a:/2. Cursos/1. Curso de AutoDesk Forge BIM/2. Codigo/2. Proyecto final/Proyecto/Views/Home/File.cshtml]
+[C:/Users/Carlos Espinoza/Documents/Proyecto/Views/Home/File.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[a:/2. Cursos/1. Curso de AutoDesk Forge BIM/2. Codigo/2. Proyecto final/Proyecto/Views/Home/Index.cshtml]
+[C:/Users/Carlos Espinoza/Documents/Proyecto/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[a:/2. Cursos/1. Curso de AutoDesk Forge BIM/2. Codigo/2. Proyecto final/Proyecto/Views/Shared/_Layout.cshtml]
+[C:/Users/Carlos Espinoza/Documents/Proyecto/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

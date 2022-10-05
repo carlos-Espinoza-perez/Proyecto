@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dbGx1AcQ6LC7XFd5kEBP8lR+7rpbMcYIAaEjIJwh0q8=",
+  "Hash": "bW/Pu2FMcNsxZofMc/aaIV+JD530KsGtWD3qWSZ1HpQ=",
   "Source": "Proyecto",
   "BasePath": "_content/Proyecto",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Proyecto\\wwwroot",
       "Source": "Proyecto",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\css\\main.css",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\css\\main.css",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\css\\views\\file.css",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\css\\views\\file.css",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "css/views/file.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\css\\views\\file.css"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\css\\views\\index.css",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\css\\views\\index.css",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "css/views/index.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\views\\index.css"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\images\\logo.png",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\images\\logo.png",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "images/logo.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo.png"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\helpers\\viewer.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\helpers\\viewer.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/helpers/viewer.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\js\\helpers\\viewer.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\index.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\index.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/index.js",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\js\\index.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\main",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\main",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/main",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\main.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\main.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/main.js",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\js\\main.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\viewer.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\viewer.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/viewer.js",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\js\\viewer.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\views\\file.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\views\\file.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/views/file.js",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\js\\views\\file.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\views\\index.js",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\views\\index.js",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/views/index.js",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\js\\views\\index.js"
     },
     {
-      "Identity": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\js\\views\\index.js.LICENSE.txt",
+      "Identity": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\js\\views\\index.js.LICENSE.txt",
       "SourceId": "Proyecto",
       "SourceType": "Discovered",
-      "ContentRoot": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\wwwroot\\",
       "BasePath": "_content/Proyecto",
       "RelativePath": "js/views/index.js.LICENSE.txt",
       "AssetKind": "All",

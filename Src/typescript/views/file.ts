@@ -2,6 +2,8 @@ import { initViewer, loadModel } from "../helpers/viewer";
 
 import { MDCList } from '@material/list';
 import { MDCRipple } from '@material/ripple';
+import {MDCMenu} from '@material/menu';
+
 
 import axios from "axios";
 
@@ -10,6 +12,8 @@ import axios from "axios";
 const list = new MDCList(document.querySelector('.mdc-list'));
 const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
 
+const menu = new MDCMenu(document.querySelector('.mdc-menu'));
+menu.open = true;
 
 // @ts-ignore
 window.list = list;

@@ -36,7 +36,7 @@ public partial class ForgeService
         var response = objectId;
 
         response = objectId.Substring(1, 6);
-        response += objectId.Substring(response.Length / 2, 18);
+        response += objectId.Substring(objectId.Length - 18, 18);
 
         return response;
     }

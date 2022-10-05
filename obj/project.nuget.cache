@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6dqugdPQm3j1kfCEqFt4Gm9+8npoNvY1c3c0fvNutXfeLE6qP4c90RlKjVWLgT8EIuwXAztl/i2/gDiQk+q7Ag==",
+  "dgSpecHash": "F1noAUgoh2uCY8a6FZ9r+XbRLn2Fh3aMfK9BlTJQzL9XZ+ux0msgP6065wMVq6BI6ZT9+wpM5vSIquBLRxGWoA==",
   "success": true,
-  "projectFilePath": "A:\\2. Cursos\\1. Curso de AutoDesk Forge BIM\\2. Codigo\\2. Proyecto final\\Proyecto\\Proyecto.csproj",
+  "projectFilePath": "C:\\Users\\Carlos Espinoza\\Documents\\Proyecto\\Proyecto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos Espinoza\\.nuget\\packages\\autodesk.forge\\1.9.7\\autodesk.forge.1.9.7.nupkg.sha512",
     "C:\\Users\\Carlos Espinoza\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
