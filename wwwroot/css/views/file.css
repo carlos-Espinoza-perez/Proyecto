@@ -20,7 +20,8 @@ body {
     margin: 15px;
     border: 1px solid #a3a3a34f;
     border-radius: 10px;
-    background-color: white; }
+    background-color: white;
+    position: relative; }
     .wrapper .viewer .adsk-viewing-viewer {
       height: calc(100vh - 64px - 32px) !important;
       width: 1440px !important;
@@ -38,11 +39,18 @@ body {
   text-align: center;
   font-weight: 500; }
 
+.mdc-list.file, .mdc-list.bucket {
+  display: none; }
+  .mdc-list.file.show, .mdc-list.bucket.show {
+    display: initial; }
+
 .mdc-list-item {
   align-items: center;
   justify-content: space-between; }
   .mdc-list-item__text {
     text-transform: capitalize; }
+  .mdc-list-item.object {
+    padding-left: 44px; }
 
 .mdc-fab {
   left: 146.5px;
@@ -53,3 +61,40 @@ body {
     margin-right: 5px; }
   .mdc-fab__label {
     text-transform: initial; }
+
+.mdc-menu {
+  min-width: 220px; }
+  .mdc-menu .mdc-list-item {
+    padding: 9px 16px;
+    border-bottom: 1px solid #dddddd50; }
+    .mdc-menu .mdc-list-item * {
+      text-transform: none; }
+    .mdc-menu .mdc-list-item:last-child {
+      border-bottom: 0; }
+
+.undo {
+  padding: 12px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border: 1px solid #ddd;
+  border-top: 0;
+  border-left: 0;
+  border-radius: 7px;
+  background: #ddd;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  display: none; }
+  .undo.show {
+    display: initial; }
+
+#toolbar-extension .adsk-control.select {
+  height: 50px;
+  width: 50px; }
+  #toolbar-extension .adsk-control.select #showInformacion {
+    display: none; }
+  #toolbar-extension .adsk-control.select input {
+    border: 0;
+    height: 100%;
+    overflow: hidden; }

@@ -28,6 +28,7 @@ body {
         border: 1px solid #a3a3a34f;
         border-radius: 10px;
         background-color: white;
+        position: relative;
 
         .adsk-viewing-viewer {
             height: calc(100vh - 64px - 32px) !important;
@@ -59,14 +60,31 @@ body {
     }
 }
 
-.mdc-list-item {
-    align-items: center;
-    justify-content: space-between;
+.mdc-list {
+    &.file, &.bucket {
+        display: none;
 
-    &__text {
-        text-transform: capitalize;
+        &.show {
+            display: initial;
+        }
     }
-}
+
+
+    &-item {
+        align-items: center;
+        justify-content: space-between;
+    
+        &__text {
+            text-transform: capitalize;
+        }
+    
+        
+        &.object {
+            padding-left: 44px;
+        }
+    }
+} 
+
 
 
 .mdc-fab {
@@ -81,5 +99,62 @@ body {
 
     &__label {
         text-transform: initial;
+    }
+}
+
+
+.mdc-menu {
+    min-width: 220px;
+
+    .mdc-list-item {
+        padding: 9px 16px;
+        border-bottom: 1px solid #dddddd50;
+        
+        * {
+            text-transform: none;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+
+.undo {
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border: 1px solid #ddd;
+    border-top: 0;
+    border-left: 0;
+    border-radius: 7px;
+    background: #ddd;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+
+    display: none;
+
+    &.show {
+        display: initial;
+    }
+}
+
+
+
+#toolbar-extension .adsk-control.select {
+    #showInformacion {
+        display: none;
+    }
+    
+    height: 50px;
+    width: 50px;
+
+    input {
+        border: 0;
+        height: 100%;
+        overflow: hidden;
     }
 }

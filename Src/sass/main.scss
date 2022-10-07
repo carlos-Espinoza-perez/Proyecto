@@ -13,9 +13,11 @@ body {
     background-color: #fafafa;
 }
 
-@import "./components/header";
-
 a {
-    color: white;
+    color: black !important;
     text-decoration: none;
 }
+
+
+@import "./components/header";
+

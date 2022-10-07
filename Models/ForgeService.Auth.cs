@@ -25,7 +25,7 @@ public partial class ForgeService
     private async Task<Token> GetInternalToken()
     {
         if (_internalTokenCache == null || _internalTokenCache.ExpiresAt < DateTime.UtcNow)
-            _internalTokenCache = await GetToken(new Scope[] { Scope.BucketCreate, Scope.BucketRead, Scope.DataRead, Scope.DataWrite, Scope.DataCreate });
+            _internalTokenCache = await GetToken(new Scope[] { Scope.BucketCreate, Scope.BucketRead, Scope.BucketDelete, Scope.DataRead, Scope.DataWrite, Scope.DataCreate });
         return _internalTokenCache;
     }
 }

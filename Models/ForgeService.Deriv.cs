@@ -15,7 +15,7 @@ public partial class ForgeService
     }
 
     // Funcion encargada de trasladar un archivo (object) a un formato valido de Autodesk (.svf)
-    public async Task<Job> TranslateModel(string objectId, string rootFilename)
+    public async Task<Job> TranslateModel(string objectId, string? rootFilename)
     {
         var token = await GetInternalToken();
         var api = new DerivativesApi();

@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/transform/contents/main.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/GoogleMapsLocator/contents/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
     <link rel="stylesheet" href="~/css/main.css">
 
     <title>Page title</title>
@@ -43,8 +47,11 @@
 
 
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4U0VvxPZ9uIntC1gmqqbzCNQpvB01ETw" type="text/javascript"></script>
     <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
-    @* <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> *@
+    <script src="http://cdn.jsdelivr.net/gh/autodesk-forge/forge-extensions/public/extensions/GoogleMapsLocator/contents/main.js"></script>
+    <script src="~/extension/Transform.js" crossorigin="anonymous"></script>
+
 
     <script src="~/js/index.js"></script>
     @RenderSection("JS", false)

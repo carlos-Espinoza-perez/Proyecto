@@ -35,11 +35,13 @@ public partial class ForgeService
     {
         var response = objectId;
 
-        response = objectId.Substring(1, 6);
-        response += objectId.Substring(objectId.Length - 18, 18);
+        response = objectId.Substring(1, 10);
+        response += objectId.Substring(objectId.Length - 25, 25);
 
         return response;
     }
+
+
 
 
     public async Task<dynamic> GetLisBucketByModel(string objectId)
@@ -82,11 +84,36 @@ public partial class ForgeService
         }
     }
 
-    // Funcion encargada de subir un archivo al bucket (Creado o por crear)
-    public async Task<ObjectDetails> UploadModel(string objectName, Stream content)
+    public async Task DeleteBucket(string bucketKey)
     {
-        await EnsureBucketExists(_bucket);
-        
+        var token = await GetInternalToken();
+        var api = new BucketsApi();
+        api.Configuration.AccessToken = token.AccessToken;
+
+        await api.DeleteBucketAsync(bucketKey.ToLower());
+    }
+
+
+    public async Task DeleteModel(string bucketKey, string objectId)
+    {
+        var token = await GetInternalToken();
+        var api = new ObjectsApi();
+        api.Configuration.AccessToken = token.AccessToken;
+
+        await api.DeleteObjectAsync(bucketKey, objectId);
+    }
+
+
+
+
+
+
+    // Funcion encargada de subir un archivo al bucket (Creado o por crear)
+    public async Task<ObjectDetails> UploadModel(string objectName, string? bucketKey, Stream content)
+    {
+        if (bucketKey == null) bucketKey = _bucket;
+        await EnsureBucketExists(bucketKey);
+
         // Obtiene el token necesario para proceder.
         var token = await GetInternalToken();
 
@@ -97,7 +124,7 @@ public partial class ForgeService
         api.Configuration.AccessToken = token.AccessToken;
 
         // Se hace el envio de los datos.
-        var results = await api.uploadResources(_bucket, new List<UploadItemDesc> { new UploadItemDesc(objectName, content) });
+        var results = await api.uploadResources(bucketKey, new List<UploadItemDesc> { new UploadItemDesc(objectName, content) });
         if (results[0].Error) throw new Exception(results[0].completed.ToString());
 
 
@@ -109,11 +136,13 @@ public partial class ForgeService
     }
 
     // Funcion que se encarga de hacer la peticion de los diferentes archivos (Objects) a la API
-    public async Task<List<GetObjectsVM>> GetObjects()
+    public async Task<List<GetObjectsVM>> GetObjects(string? bucketKey)
     {
         const int PageSize = 64;
+
+        if (bucketKey == null) bucketKey = _bucket;
         // Se obtiene el bucket necesario (Creado o por crear)
-        await EnsureBucketExists(_bucket);
+        await EnsureBucketExists(bucketKey);
         
         
         var token = await GetInternalToken();
@@ -122,7 +151,7 @@ public partial class ForgeService
 
         // Variable en donde se guardaran la lista de archivos.
         var results = new List<ObjectDetails>();
-        var response = (await api.GetObjectsAsync(_bucket, PageSize)).ToObject<BucketObjects>();
+        var response = (await api.GetObjectsAsync(bucketKey, PageSize)).ToObject<BucketObjects>();
         results.AddRange(response.Items);
 
 
@@ -132,7 +161,7 @@ public partial class ForgeService
         while (!string.IsNullOrEmpty(response.Next))
         {
             var queryParams = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(new Uri(response.Next).Query);
-            response = (await api.GetObjectsAsync(_bucket, PageSize, null, queryParams["startAt"])).ToObject<BucketObjects>();
+            response = (await api.GetObjectsAsync(bucketKey, PageSize, null, queryParams["startAt"])).ToObject<BucketObjects>();
             results.AddRange(response.Items);
         }
 
@@ -152,7 +181,8 @@ public partial class ForgeService
                 {
                     ObjectKey = item.ObjectKey,
                     Thumbnail = base64,
-                    Urn = Base64Encode(item.ObjectId)
+                    Urn = Base64Encode(item.ObjectId),
+                    ObjectId = item.ObjectId
                 });
             }
             catch (System.Exception)

@@ -6,16 +6,15 @@
   "scripts": {
     "css": "node-sass ./Src/sass -o ./wwwroot/css/ --output-style compressed",
     "js": "webpack-cli --config ./Src/webpack.config.js --mode production",
-    "build": "npm run clear && npm run css && npm run js",
     "build-development": "node-sass ./Src/sass/ -o ./wwwroot/css --output-style && webpack-cli --config ./Src/webpack.config.js --mode development",
     "css:watch": "node-sass ./Src/sass/ -o ./wwwroot/css --output-style --watch",
-    "js:watch": "webpack-cli --config ./Src/webpack.config.js --watch --mode development",
-    "clear": "rm -rf ./wwwroot/*"
+    "js:watch": "webpack-cli --config ./Src/webpack.config.js --watch --mode development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "color-to-vec4": "^0.1.1",
     "copy-webpack-plugin": "11.0.0",
     "css-loader": "6.7.1",
     "node-sass": "7.0.1",
@@ -30,6 +29,7 @@
     "@material/drawer": "^14.0.0",
     "@material/fab": "^14.0.0",
     "@material/list": "^14.0.0",
+    "@material/menu": "^14.0.0",
     "@material/progress-indicator": "^14.0.0",
     "@material/textfield": "^14.0.0",
     "@material/top-app-bar": "^14.0.0",

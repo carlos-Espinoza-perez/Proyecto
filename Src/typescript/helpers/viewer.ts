@@ -1,4 +1,6 @@
-﻿async function getAccessToken(callback) {
+﻿import './extensions/customColor';
+
+async function getAccessToken(callback) {
     try {
         const resp = await fetch('/auth/token');
         if (!resp.ok) {
@@ -16,13 +18,14 @@ export function initViewer(container) {
     return new Promise(function (resolve, reject) {
         Autodesk.Viewing.Initializer({ getAccessToken }, function () {
             const config = {
-                extensions: ['Autodesk.DocumentBrowser'],
+                extensions: ['Autodesk.DocumentBrowser', 'GoogleMapsLocator', 'CustomColor'],
             };
 
-
+            
+            
             const viewer = new Autodesk.Viewing.GuiViewer3D(container, config);
             viewer.start();
-
+            
             viewer.setBackgroundColor(255, 255, 255, 255, 255, 255);
             viewer.setTheme('light-theme');
             
@@ -36,13 +39,18 @@ export function loadModel(viewer, urn) {
         
         function onDocumentLoadSuccess(doc) {
             resolve(viewer.loadDocumentNode(doc, doc.getRoot().getDefaultGeometry()));
+
+            viewer.setBackgroundColor(255, 255, 255, 255, 255, 255);
+            viewer.setTheme('light-theme');
+            viewer.loadExtension("TransformationExtension")
         }
 
         function onDocumentLoadFailure(code, message, errors) {
             alert(`Código de error: ${code}, mensaje: ${message}`);
             reject({ code, message, errors });
         }
-        viewer.setLightPreset(0);
+        
+        // viewer.setLightPreset(0);
         Autodesk.Viewing.Document.load('urn:' + urn, onDocumentLoadSuccess, onDocumentLoadFailure);
     });
 }

@@ -17,33 +17,35 @@
 }
 
 
+<input type="file" id="file-obj" hidden>
+
 <div class="mdc-menu mdc-menu-surface" id="demo-menu">
-  <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
-    <li>
-      <ul class="mdc-menu__selection-group">
-        <li class="mdc-list-item" role="menuitem">
-          <span class="mdc-list-item__ripple"></span>
-          <span class="mdc-list-item__graphic mdc-menu__selection-group-icon">
-            ...
-          </span>
-          <span class="mdc-list-item__text">Single</span>
+    <ul class="mdc-list bucket" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+        <li>
+            <ul class="mdc-menu__selection-group">
+                <li class="mdc-list-item" role="menuitem" onclick="addObjectByBucket()">
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__text">Agregar archivo</span>
+                </li>
+
+                <li class="mdc-list-item" role="menuitem" onclick="deleteBucket()">
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__text">Borrar folder</span>
+                </li>
+            </ul>
         </li>
-        <li class="mdc-list-item" role="menuitem">
-          <span class="mdc-list-item__ripple"></span>
-          <span class="mdc-list-item__graphic mdc-menu__selection-group-icon">
-           ...
-          </span>
-          <span class="mdc-list-item__text">1.15</span>
+    </ul>
+    
+    <ul class="mdc-list file" role="menu" aria-hidden="true" aria-orientation="vertical" tabindex="-1">
+        <li>
+            <ul class="mdc-menu__selection-group">
+                <li class="mdc-list-item" role="menuitem" onclick="deleteArchivo()">
+                    <span class="mdc-list-item__ripple"></span>
+                    <span class="mdc-list-item__text">Borrar archivo</span>
+                </li>
+            </ul>
         </li>
-      </ul>
-    </li>
-    <li class="mdc-list-divider" role="separator"></li>
-    <li class="mdc-list-item" role="menuitem">
-      <span class="mdc-list-item__ripple"></span>
-      <span class="mdc-list-item__text">Add space before paragraph</span>
-    </li>
-    ...
-  </ul>
+    </ul>
 </div>
 
 
@@ -60,4 +62,6 @@
     </button>
 </main>
 
-<main class="viewer"></main>
+<main class="viewer">
+    <div class="undo material-icons">undo</div>
+</main>

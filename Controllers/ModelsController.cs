@@ -36,6 +36,12 @@ public class ModelsController : ControllerBase
         return Ok(response);
     }
 
+    [HttpPost("DeleteBucket")]
+    public async Task DeleteBucket(string bucketKey)
+    {
+        await _forgeService.DeleteBucket(bucketKey);
+    }
+
 
 
 
@@ -44,11 +50,19 @@ public class ModelsController : ControllerBase
 
     // Funcion encargada de obtener todos los archivos (objects)
     [HttpGet()]
-    public async Task<List<GetObjectsVM>> GetModels()
+    public async Task<List<GetObjectsVM>> GetModels(string? bucketKey)
     {
-        var objects = await _forgeService.GetObjects();
+        var objects = await _forgeService.GetObjects(bucketKey);
         return objects;
     }
+
+    [HttpPost("DeleteModel")]
+    public async Task DeleteModel(string bucketKey, string objectId)
+    {
+        await _forgeService.DeleteModel(bucketKey, objectId);
+    }
+
+
 
 
     // Funcion que retorna un valor en porcentaje segun como se esta trasladando un archio
@@ -76,6 +90,8 @@ public class ModelsController : ControllerBase
 
         [FromForm(Name = "model-file")]
         public IFormFile File { get; set; }
+        [FromForm(Name = "bucket-key")]
+        public string? BucketKey { get; set; }
     }
 
     [HttpPost()]
@@ -85,7 +101,7 @@ public class ModelsController : ControllerBase
         {
             await form.File.CopyToAsync(stream);
             stream.Position = 0;
-            var obj = await _forgeService.UploadModel(form.File.FileName, stream);
+            var obj = await _forgeService.UploadModel(form.File.FileName, form.BucketKey, stream);
             var job = await _forgeService.TranslateModel(obj.ObjectId, form.Entrypoint);
             return new BucketObject(obj.ObjectKey, job.Urn);
         }

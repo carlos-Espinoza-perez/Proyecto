@@ -1,6 +1,7 @@
 import axios from "axios";
 
 import {MDCRipple} from '@material/ripple';
+import { uploadModels } from "../helpers/models";
 
 
 const btnNewProject: HTMLElement = document.querySelector('.mdc-fab');
@@ -24,21 +25,7 @@ inputFile.onchange = async (e: Event) => {
     
     const file = target.files[0];
 
-    let data = new FormData();
-    data.append('model-file', file);
-
-
-    if (file.name.endsWith('.zip')) { // Cuando el archivo es un ZIP entonces se pide el nombre principal del archivo.
-        const entrypoint = window.prompt('Ingrese el nombre de archivo del diseño principal dentro del ZIP.');
-        data.append('model-zip-entrypoint', entrypoint);
-    }
-
-    
-    await fetch('/Models', { method: 'POST', body: data })
-        .then(a => getListObjects())
-        .catch(a => {
-            alert(`${file.name} no puede ser subido al servidor`);
-        });
+    uploadModels(file, "", getListObjects);
 };
 
 
@@ -53,7 +40,7 @@ const getListObjects = async () => {
     for (const item of response.data) {
         listCard.innerHTML += 
             `
-                <div class="mdc-card" onclick="redirectToViewFile('${item.urn}')">
+                <a class="mdc-card" href="/Home/File/${item.urn}">
                     ${
                         item.thumbnail != ""
                             ?
@@ -70,21 +57,10 @@ const getListObjects = async () => {
                         <div class="mdc-card__title">${item.objectKey}</div>
                         <div class="mdc-card__subhead">...</div>
                     </div>
-                </div>
+                </a>
             `;
     }
 };
-
-
-// redirect to view files 
-const redirectToViewFile = (urn) => {
-    location.href = `/Home/File/${urn}`;
-};
-
-// @ts-ignore
-window.redirectToViewFile = redirectToViewFile;
-
-
 
 // Ejecutar cuando el dom este listo 
 addEventListener("DOMContentLoaded", () => {

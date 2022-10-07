@@ -10,10 +10,14 @@
 body {
   background-color: #fafafa; }
 
+a {
+  color: black !important;
+  text-decoration: none; }
+
 .mdc-top-app-bar__row {
   max-width: 1200px;
   margin: auto; }
 
-a {
-  color: white;
+.mdc-top-app-bar__title {
+  color: white !important;
   text-decoration: none; }
