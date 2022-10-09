@@ -8,7 +8,9 @@
     "js": "webpack-cli --config ./Src/webpack.config.js --mode production",
     "build-development": "node-sass ./Src/sass/ -o ./wwwroot/css --output-style && webpack-cli --config ./Src/webpack.config.js --mode development",
     "css:watch": "node-sass ./Src/sass/ -o ./wwwroot/css --output-style --watch",
-    "js:watch": "webpack-cli --config ./Src/webpack.config.js --watch --mode development"
+    "js:watch": "webpack-cli --config ./Src/webpack.config.js --watch --mode development",
+
+    "build": "node-sass ./Src/sass/ -o ./wwwroot/css --output-style --compressed && webpack-cli --config ./Src/webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "",
